@@ -20,8 +20,9 @@
 #define FACTORY_TEST 3
 
 &mt {
-    require-prior-idle-ms = <125>;
+    require-prior-idle-ms = <200>;
     flavor = "balanced";
+    tapping-term-ms = <350>;
 };
 
 / {
@@ -90,8 +91,9 @@
         Caps {
             bindings = <&kp CAPSLOCK>;
             key-positions = <15 16>;
-            require-prior-idle-ms = <70>;
+            require-prior-idle-ms = <250>;
             slow-release;
+            layers = <0>;
         };
     };
 
