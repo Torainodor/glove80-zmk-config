@@ -20,9 +20,9 @@
 #define FACTORY_TEST 3
 
 &mt {
-    require-prior-idle-ms = <110>;
+    require-prior-idle-ms = <160>;
     flavor = "balanced";
-    tapping-term-ms = <200>;
+    tapping-term-ms = <180>;
 };
 
 / {
