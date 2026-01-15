@@ -68,6 +68,36 @@
             hold-trigger-key-positions = <5 6 7 8 9 16 17 18 19 20 21 28 29 30 31 32 33 40 41 42 43 44 45 55 56 57 58 59 60 61 62 63 72 73 74 75 76 77 78 79>;
             flavor = "balanced";
         };
+
+        HRM_LSHIFT: HRM_LSHIFT {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HRM_LSHIFT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <180>;
+            quick-tap-ms = <125>;
+            require-prior-idle-ms = <120>;
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 15 22 23 24 25 26 27 34 35 36 37 38 39 46 47 48 49 50 51 52 53 54 64 65 66 67 68 69 70 71>;
+            flavor = "balanced";
+            retro-tap;
+        };
+
+        HRM_RSHIFT: HRM_RSHIFT {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HRM_RSHIFT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <180>;
+            quick-tap-ms = <125>;
+            require-prior-idle-ms = <120>;
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <5 6 7 8 9 16 17 18 19 20 21 28 29 30 31 32 33 40 41 42 43 44 45 55 56 57 58 59 60 61 62 63 72 73 74 75 76 77 78 79>;
+            flavor = "balanced";
+            retro-tap;
+        };
     };
 
     macros {
@@ -154,12 +184,12 @@
             // | MAGIC | HOME| END | LEFT | RIGHT|      | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |      |  UP   | DOWN  |  [   |   ]   | PGDN |
 
             bindings = <
-&kp F1      &kp F2          &kp F3          &kp F4         &kp F5                                                                                                                      &kp F6              &kp F7              &kp F8          &kp F9                  &kp F10
-&kp EQUAL   &kp N1          &kp N2          &kp N3         &kp N4         &kp N5                                                                                               &kp N6  &kp N7              &kp N8              &kp N9          &kp N0                  &kp MINUS
-&kp TAB     &kp Q           &kp W           &kp E          &kp R          &kp T                                                                                                &kp Y   &kp U               &kp I               &kp O           &kp P                   &kp BSLH
-&kp ESC     &HRM_L LSHFT A  &HRM_L LCTRL S  &HRM_L LALT D  &HRM_L LGUI F  &kp G                                                                                                &kp H   &HRM_R RIGHT_GUI J  &HRM_R RIGHT_ALT K  &HRM_R RCTRL L  &HRM_R RSHFT SEMICOLON  &kp SQT
-&kp GRAVE   &kp Z           &kp X           &kp C          &kp V          &kp B   &kp LS(LA(LC(LGUI)))  &kp LSHIFT     &layer_td  &kp RCTRL  &kp RSHFT  &kp RS(RA(RC(RMETA)))  &kp N   &kp M               &kp COMMA           &kp DOT         &kp FSLH                &kp PG_UP
-&magic 2 0  &kp HOME        &kp END         &kp LEFT       &kp RIGHT              &kp BSPC              &mt SPACE DEL  &kp CAPS   &kp RALT   &kp RET    &kp SPACE                      &kp UP              &kp DOWN            &kp LBKT        &kp RBKT                &kp PG_DN
+&kp F1      &kp F2               &kp F3          &kp F4         &kp F5                                                                                                                      &kp F6              &kp F7              &kp F8          &kp F9                       &kp F10
+&kp EQUAL   &kp N1               &kp N2          &kp N3         &kp N4         &kp N5                                                                                               &kp N6  &kp N7              &kp N8              &kp N9          &kp N0                       &kp MINUS
+&kp TAB     &kp Q                &kp W           &kp E          &kp R          &kp T                                                                                                &kp Y   &kp U               &kp I               &kp O           &kp P                        &kp BSLH
+&kp ESC     &HRM_LSHIFT LSHFT A  &HRM_L LCTRL S  &HRM_L LALT D  &HRM_L LGUI F  &kp G                                                                                                &kp H   &HRM_R RIGHT_GUI J  &HRM_R RIGHT_ALT K  &HRM_R RCTRL L  &HRM_RSHIFT RSHFT SEMICOLON  &kp SQT
+&kp GRAVE   &kp Z                &kp X           &kp C          &kp V          &kp B   &kp LS(LA(LC(LGUI)))  &kp LSHIFT     &layer_td  &kp RCTRL  &kp RSHFT  &kp RS(RA(RC(RMETA)))  &kp N   &kp M               &kp COMMA           &kp DOT         &kp FSLH                     &kp PG_UP
+&magic 2 0  &kp HOME             &kp END         &kp LEFT       &kp RIGHT              &kp BSPC              &mt SPACE DEL  &kp CAPS   &kp RALT   &kp RET    &kp SPACE                      &kp UP              &kp DOWN            &kp LBKT        &kp RBKT                     &kp PG_DN
             >;
         };
 
